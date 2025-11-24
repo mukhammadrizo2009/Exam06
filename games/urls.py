@@ -1,5 +1,7 @@
 from django.urls import path
-from games.views import example
+from games.views import game_list_create , game_detail
+
 urlpatterns = [
-    path('', example , name="Example" ),
+    path('', game_list_create, name="GameList"),
+    path('<int:id>/', game_detail, name="GameDetail")
 ]
