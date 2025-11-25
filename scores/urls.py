@@ -1,6 +1,7 @@
 from django.urls import path
-from scores.views import example
+from . import views
 
 urlpatterns = [
-    path('', example , name="Example" ),
+    path('', views.scores_list, name="scores-list"),
+    path('<int:id>/', views.score_detail, name="scores-detail"),
 ]
