@@ -1,6 +1,8 @@
 from django.urls import path
-from leaderboard.views import example
+from .views import game_leaderboard , leaderboard_top , global_leaderboard
 
 urlpatterns = [
-    path('', example , name="Example" ),
+    path('', game_leaderboard, name='GameLeaderboard'),
+    path('top/', leaderboard_top, name="TopLederboard"),
+    path('global/', global_leaderboard, name='GlobalLeaderboard'),
 ]
